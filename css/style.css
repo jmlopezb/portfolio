@@ -1,0 +1,199 @@
+/*FUENTES*/
+@font-face{
+	font-family: 'roboto';							/*opentype*/
+	src:url('../rsc/fonts/Roboto.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'robotoSlab';							/*opentype*/
+	src:url('../rsc/fonts/RobotoSlab.ttf') format('truetype');
+}
+
+/*VARIABLES*/
+:root{
+	--colorPrincipal: white ;
+	--colorSecundario: #777777 ;
+	--colorTerciario: #ffc107;
+}
+
+/*CSS EN COMÚN*/
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0px;
+	padding:0px;
+	color: var(--colorPrincipal);
+	font-family:'roboto';
+	font-style: medium;
+	overflow: hidden;	
+}
+nav{
+	visibility: hidden;
+	opacity: 0;
+}
+.logoNav{
+	height: 50px;
+	border-style: solid;
+}
+/*EMPIEZA EL CSS DEL HEADER*/
+.interiorHeader{
+	width: 100%;
+	height: 100vh;
+	background: url('../rsc/img/fondoBN.png') no-repeat center center;
+	background-size:cover;
+	position: absolute;
+}
+.esconder {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s 3s, opacity 3s linear;
+}
+.visible {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 2s linear;
+}
+.interiorHeader2{
+	width: 100%;
+	height: 100vh;
+	background: url('../rsc/img/fondo.jpg') no-repeat center center;
+	background-size:cover;
+	position: relative;
+
+}
+.boton{
+	height: 85px;
+}
+.letras{
+	color: var(--colorPrincipal);
+	font-size: 30px;
+}
+
+/*EMPIEZA EL CSS DE LAS SECCIONES*/
+.filtroBN{
+	width: 100%;
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.09855280002626055) 95%, rgba(255,255,255,0) 100%); 
+	background-attachment: fixed;
+}
+.secciones{
+	background: url(../rsc/img/fondoPagina.jpg)no-repeat center center;
+	background-size:cover;
+	background-attachment: fixed;	
+
+}
+.seccion5{
+	height: 100vh;
+}
+.fotoMia{
+	height: 500px;
+	border-bottom: double;
+}
+.ficha,.fondoFichas,.contenidoFichas{
+
+	margin: auto;
+	margin-bottom: 40px;
+	margin-top: 20px;
+	width: 300px;
+	height: 300px;
+	border-radius: 50px;
+
+}
+.fondoFichas{
+	position: absolute;
+	background: var(--colorTerciario);
+	opacity: 60%;
+}
+.imagenFichas{
+	height: 150px;
+
+}
+.contenidoFichas{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.textoFichas{
+
+	width: 200px;
+	font-size: 25px;
+	margin: auto;
+}
+a{
+	color:  var(--colorPrimario);
+	font-family: 'robotoSlab';
+}
+
+/*RESPONSIVE*/
+/* laptop */
+@media screen and (min-width: 993px ){
+	/*EMPIEZA EL CSS DEL HEADER*/
+	.textoHeader{
+		width: 100%;
+		bottom:0% ;
+		display: flex;
+		justify-content: flex-end; 
+	}
+	.nombre{
+		text-align: center;
+		margin: 0 auto;
+		font-size: 40px;
+	}
+	/*EMPIEZA EL CSS DE LAS SECCIONES*/
+	.nombreSeccion1,.nombreSeccion2,.nombreSeccion3,.nombreSeccion4,.nombreSeccion5{
+		padding-top:85px;
+		font-size: 100px;
+		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.texto1,.texto2,.texto3,.texto4,.texto5{
+		font-family:'robotoSlab';
+		font-size: 30px;
+		line-height : 50px;
+		font-weight: bold;
+		margin: 150px 100px;
+	}
+	.fichasTotales{
+		display: flex;
+	}
+}
+/* tablet */
+@media screen and (max-width: 992px ){
+	/*EMPIEZA EL CSS DEL HEADER*/
+
+	.textoHeader{
+		height: 100px;
+		width: 220px;
+	}
+	.nombre{
+		text-align: center;
+		margin: 0 auto;
+		font-size: 15px;
+	}
+	/*EMPIEZA EL CSS DE LAS SECCIONES*/
+
+	.nombreSeccion1,.nombreSeccion2,.nombreSeccion3,.nombreSeccion4,.nombreSeccion5{
+		padding-top:85px;
+		font-size: 50px;
+		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.nombreSeccion3{
+		font-size: 40px;
+	}
+	.texto1,.texto2,.texto3,.texto4,.texto5{
+		font-family:'robotoSlab';
+		font-size: 15px;
+		line-height : 25px;
+		font-weight: bold;
+		margin: 150px 30px;
+	}
+	.fichasTotales{
+		display: block;
+	}
+}

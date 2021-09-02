@@ -1,0 +1,9 @@
+saque el nav bar de la pagina de B5
+
+
+http://wp.regaltheme.com/mim/?version=dark
+
+glassmorphic
+
+
+https://scrollrevealjs.org/guide/customization.html
